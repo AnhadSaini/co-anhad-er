@@ -1,0 +1,37 @@
+print("ELECTRICITY BILL GENERATOR")
+subscriber_name = input("Enter the name of the subscriber = ")
+pres = int(input("Enter value for present meter reading = "))
+prev = int(input("Enter value for previous meter reading = "))
+print("\n\n\n\n Name of the subscriber", subscriber_name)
+units = pres - prev
+print("Number of unit utilize", units)
+print('''Unit above 200 will be charged @ 10 rs
+Unit above 100 will be charged @ 5 rs
+Basic units will be charged @ 3 rs
+''')
+#For Higher price unit
+if(units>=201):
+    hp = 10
+    hu = units - 200
+    ha = hp * hu
+    print("Higher slab unit price = ", hu, "Price = ", hp, "Higher Amount = ", ha)
+    units = units - hu
+
+#For medium price unit
+if(units>=100):
+    mp = 5
+    mu = units - 100
+    ma = mp * mu
+    print("Medium slab unit price = ", mu, "Price = ", mp, "Higher Amount = ", ma)
+    units = units - mu
+
+#For lower price unit
+if(units>=1):
+    bp = 3
+    bu = units
+    ba = bp * bu
+    print("Basic slab unit price = ", bu, "Price = ", bp, "Higher Amount = ", ba )
+
+tamount = ha + ma + ba
+print("\t\t\t\t\t Total bill due = ", tamount
+print("Number of unit utilize", units)
