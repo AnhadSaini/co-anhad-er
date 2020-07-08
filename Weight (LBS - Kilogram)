@@ -1,0 +1,10 @@
+name = (input("Enter the name of the person: "))
+weight = int(input("Please enter your weight: "))
+unit = input('(L)bs or (K)g: ')
+
+if unit.upper() == 'L':
+    convert = weight * 0.45
+    print(f' You are {convert} KG')
+else:
+    convert = weight / 0.45
+    print(f'You are {convert} Pounds')
